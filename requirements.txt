@@ -1,0 +1,9 @@
+streamlit
+pandas
+plotly & plotly express
+matplotlib
+numpy
+seaborn
+pyngrok & ngrok
+dataset
+development environment

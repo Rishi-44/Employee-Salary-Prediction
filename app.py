@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-st.set_page_config(layout="wide", page_title="Employee Salary Prediction System", page_icon="📈")
+st.set_page_config(layout="wide", page_title="Employee Salary Prediction App", page_icon="💼")
 
 # Custom CSS for styling
 st.markdown(
@@ -355,14 +355,14 @@ def salary_prediction_page():
         elif occupation in ['Sales', 'Tech-support']:
             predicted_salary += 8
         if gender == 'Female':
-            predicted_salary -= 3 
+            predicted_salary -= 3
         if capital_gain > 0:
             predicted_salary += 5
         if capital_loss > 0:
             predicted_salary -= 2
 
         predicted_salary = max(10.0, predicted_salary)
-        predicted_salary = min(99.0, predicted_salary) 
+        predicted_salary = min(99.0, predicted_salary)
 
         st.markdown(f"""
         <div class="info-card" style="background-color: #e6ffe6; border-color: #00cc00;">
@@ -505,7 +505,7 @@ def model_analytics_page():
     np.random.seed(42)
     actual_salaries = np.random.normal(loc=40, scale=10, size=200)
     predicted_salaries = actual_salaries * 0.9 + np.random.normal(loc=5, scale=3, size=200)
-    predicted_salaries = np.clip(predicted_salaries, 10, 90) 
+    predicted_salaries = np.clip(predicted_salaries, 10, 90)
     prediction_df = pd.DataFrame({'Actual Salary (Hours/Week)': actual_salaries, 'Predicted Salary (Hours/Week)': predicted_salaries})
 
     fig_pred_dist = px.scatter(prediction_df, x='Actual Salary (Hours/Week)', y='Predicted Salary (Hours/Week)',
